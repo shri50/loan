@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print("we are in index deaful;t api")
-    return render_template('index.html')
+    
+    return render_template('one.html')
 
 @app.route('/prediction',methods = ['GET','POST'])
 def prediction():
@@ -42,7 +42,7 @@ def prediction():
         result = "LOAN REJECTED"
     print(result)
 
-    return render_template('index.html',loan_result=result)
+    return render_template('one.html',loan_result=result)
 
 
 
